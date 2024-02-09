@@ -48,6 +48,13 @@ def labTask(*distributionShapeParams, n: int=800, probabilityDistribution: rv_co
 
     drawFigure(sample, probabilityDistribution, *distributionShapeParams)
 
+    mean = np.mean(sample)
+
+    variance = np.var(sample)
+
+    standardDeviation = variance ** 0.5
+
+    print(f'Основні характеристики вибірки:\nМатематичне сподівання: {mean};\nДисперсія: {variance};\nСередньоквадратичне відхилення: {standardDeviation}.')
 
 if __name__ == '__main__':
     try:
